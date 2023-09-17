@@ -1,0 +1,27 @@
+@use "./common/mixins";
+
+.owner {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 24px auto;
+  padding: 0 20px;
+}
+
+.owner__title {
+  @include mixins.oswald(24px, 26px);
+  color: #000000;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.owner__field-label {
+  @include mixins.oswald(16px, 18px);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.owner__field-label:last-child {
+  margin-bottom: 0;
+}

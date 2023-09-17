@@ -1,17 +1,21 @@
+@use "./common/mixins";
+
 .location__wrapper {
   display: flex;
   padding: 26px 20px;
   flex-wrap: wrap;
+  background-color: #f2f2f2;
+}
+
+.location__wrapper--neutral {
+  background-color: transparent;
 }
 
 .location__call {
+  @include mixins.oswald(16px, 20px);
   display: flex;
   flex-direction: column;
   width: 140px;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
   color: #000000;
   text-transform: uppercase;
   margin: 0;

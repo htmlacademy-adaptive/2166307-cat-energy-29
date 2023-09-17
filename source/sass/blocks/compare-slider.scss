@@ -11,19 +11,21 @@
 
 .compare-slider__illustration {
   position: absolute;
-  background-image: url("../../img/slim_cat.png");
-  background-repeat: no-repeat;
   font-size: 0;
   width: 320px;
   height: 100%;
   margin: 0;
 }
 
+.compare-slider__divisor-image {
+  position: absolute;
+  left: 55%;
+}
+
 .compare-slider__divisor {
   position: absolute;
-  background-image: url("../../img/fat_cat.png");
   background-color: #eaeaea;
-  background-repeat: no-repeat;
+  overflow: hidden;
   width: 320px;
   box-shadow: 0 5px 10px -2px #0000004d;
   bottom: 0;

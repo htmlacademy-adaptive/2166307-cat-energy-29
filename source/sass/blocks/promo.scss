@@ -1,0 +1,36 @@
+@use "./common/mixins";
+
+.promo {
+  display: flex;
+  width: 280px;
+  flex-direction: column;
+  background-image: url("../../img/cat_bag.png");
+  margin: 0 auto 61px auto;
+}
+
+.promo__wrapper {
+  background-color: #68b738d9;
+}
+
+.promo__description {
+  @include mixins.lato(16px, 20px);
+  position: relative;
+  display: flex;
+  text-align: center;
+  width: 161px;
+  flex-wrap: wrap;
+  padding: 187px 0 43px 0;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.promo__description::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 78px;
+  height: 80px;
+  top: 59px;
+  left: 39px;
+  background-image: url("../../img/gift_icon.svg");
+}

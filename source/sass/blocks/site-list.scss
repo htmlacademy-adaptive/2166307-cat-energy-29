@@ -1,7 +1,14 @@
+@use "./common/mixins";
+
 .site-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  @include mixins.list_off;
+  @include mixins.slow_apperance;
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  width: 320px;
+  left: -20px;
+  z-index: 2;
 }
 
 .site-list__item {
@@ -16,11 +23,20 @@
 }
 
 .site-list__link {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 20px;
+  @include mixins.oswald(20px, 20px);
+  position: relative;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+}
+
+.site-list__link--active::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  top: 28px;
+  left: center;
+  background-color: #68b738;
 }

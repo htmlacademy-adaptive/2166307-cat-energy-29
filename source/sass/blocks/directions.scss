@@ -1,12 +1,12 @@
+@use "./common/mixins";
+
 .directions__wrapper {
   display: flex;
   margin: 0 20px;
 }
 
 .directions__list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  @include mixins.list_off;
 }
 
 .directions__item {
@@ -41,10 +41,7 @@
 }
 
 .directions__title {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 37px;
+  @include mixins.oswald(24px, 37px);
   text-transform: uppercase;
   margin: 0;
   margin-left: 70px;

@@ -1,20 +1,9 @@
-@mixin icon_element {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 0;
-  left: -80px;
-}
+@use "./common/mixins";
 
 .benefits__header {
+  @include mixins.oswald(36px, 40px);
   margin: 0;
   margin-bottom: 32px;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
   color: #000000;
 }
 
@@ -24,12 +13,10 @@
 }
 
 .benefits__list {
+  @include mixins.list_off;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
 .benefits__item {
@@ -38,22 +25,22 @@
 }
 
 .benefits__item--nutrient::before {
-  @include icon_element();
+  @include mixins.icon_element();
   background-image: url("../../img/nutrient_icon.svg");
 }
 
 .benefits__item--practical::before {
-  @include icon_element();
+  @include mixins.icon_element();
   background-image: url("../../img/practical_icon.svg");
 }
 
 .benefits__item--economic::before {
-  @include icon_element();
+  @include mixins.icon_element();
   background-image: url("../../img/economic_icon.svg");
 }
 
 .benefits__item--efficient::before {
-  @include icon_element();
+  @include mixins.icon_element();
   background-image: url("../../img/efficient_icon.svg");
 }
 

@@ -1,3 +1,7 @@
+@use "./common/mixins.scss";
+@use "./common/global.scss";
+@use "./common/visually-hidden.scss";
+@use "./common/fonts.scss";
 @use "./blocks/page.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/logo.scss";
@@ -8,7 +12,6 @@
 @use "./blocks/directions.scss";
 @use "./blocks/benefits.scss";
 @use "./blocks/example.scss";
-@use "./blocks/slider.scss";
 @use "./blocks/location.scss";
 @use "./blocks/logo-mark.scss";
 @use "./blocks/main-footer.scss";
@@ -16,52 +19,19 @@
 @use "./blocks/copyright.scss";
 @use "./blocks/link.scss";
 @use "./blocks/compare-slider.scss";
-
-
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/lato/Lato-Regular.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswald/oswaldregular.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
-  font-display: swap;
-}
-
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  top: 0;
-  left: 0;
-}
-
-img {
-  max-width: 100%;
-  object-fit: contain;
-}
-
+@use "./blocks/catalog.scss";
+@use "./blocks/card.scss";
+@use "./blocks/extention.scss";
+@use "./blocks/additional-offer.scss";
+@use "./blocks/offer.scss";
+@use "./blocks/promo.scss";
+@use "./blocks/form.scss";
+@use "./blocks/pet.scss";
+@use "./blocks/owner.scss";
+@use "./blocks/goal.scss";
+@use "./blocks/habits.scss";
+@use "./blocks/supplements.scss";
+@use "./blocks/input.scss";
+@use "./blocks/radio.scss";
+@use "./blocks/checkbox.scss";
+@use "./blocks/textarea.scss";

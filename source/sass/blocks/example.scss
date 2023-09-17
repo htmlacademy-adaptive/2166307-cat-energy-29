@@ -1,3 +1,5 @@
+@use "./common/mixins";
+
 .example {
   background-color: #eaeaea;
 }
@@ -7,10 +9,7 @@
 }
 
 .example__header {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
+  @include mixins.oswald(36px, 40px);
   color: #000000;
   margin: 0;
   margin-bottom: 40px;
@@ -38,10 +37,7 @@
 }
 
 .example__number {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
+  @include mixins.oswald(24px, 24px);
   color: #000000;
 }
 
@@ -53,10 +49,7 @@
 }
 
 .example__conclusion {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  @include mixins.oswald(14px, 20px);
   text-align: center;
   text-transform: uppercase;
   margin: 0;

@@ -1,9 +1,9 @@
+@use "./common/mixins";
+
 .social__list {
+  @include mixins.list_off;
   display: flex;
   gap: 24px;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
 .social__item {

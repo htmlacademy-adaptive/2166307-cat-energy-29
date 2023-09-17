@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 13px 0 14px 0;
   flex-wrap: wrap;
 }
 
@@ -28,7 +29,8 @@
   width: 18.2px;
   height: 18px;
   border: 0;
-  background-image: url("../../img/toggle_enabled.svg");
+  background-image: url("../../img/toggle_disabled.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
+

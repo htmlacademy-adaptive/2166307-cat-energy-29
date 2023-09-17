@@ -1,0 +1,32 @@
+@use "./common/mixins";
+
+.pet {
+  margin: 0 auto 24px auto;
+  padding: 0 20px;
+}
+
+.pet__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.pet__title {
+  @include mixins.oswald(14px, 18px);
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 39px;
+}
+
+.pet__field-label {
+  @include mixins.oswald(16px, 18px);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  white-space: nowrap;
+}
+
+.pet__field-label:last-child {
+  margin-bottom: 0;
+}
+
