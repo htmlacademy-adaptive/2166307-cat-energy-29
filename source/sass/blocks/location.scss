@@ -1,0 +1,46 @@
+@use "./common/mixins";
+
+.location__wrapper {
+  display: flex;
+  padding: 26px 20px;
+  flex-wrap: wrap;
+  background-color: #f2f2f2;
+}
+
+.location__wrapper--neutral {
+  background-color: transparent;
+}
+
+.location__call {
+  @include mixins.oswald(16px, 20px);
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  color: #000000;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.location__address {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.location__map {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../img/location.png");
+  width: 320px;
+  height: 362px;
+}
+
+.location__mark {
+  display: flex;
+  width: 57px;
+  height: 53px;
+  padding: 139px 129px 170px 134px;
+  z-index: 2;
+}

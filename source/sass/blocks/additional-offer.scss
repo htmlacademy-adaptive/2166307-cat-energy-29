@@ -1,0 +1,30 @@
+@use "./common/mixins";
+
+.additional-offer {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+.additional-offer__header {
+  @include mixins.oswald(24px, 24px);
+  color: #000000;
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.additional-offer__list {
+  @include mixins.list_off;
+}
+
+.additional-offer__item {
+  border-top: 1px solid #cdcdcd;
+  padding: 13px 0 19px 0;
+}
+
+.additional-offer__item:last-child {
+  border-bottom: 1px solid #cdcdcd;
+}
+

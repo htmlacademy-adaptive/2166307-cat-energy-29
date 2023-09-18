@@ -1,0 +1,42 @@
+@use "./common/mixins";
+
+.site-list {
+  @include mixins.list_off;
+  @include mixins.slow_apperance;
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  width: 320px;
+  left: -20px;
+  z-index: 2;
+}
+
+.site-list__item {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 22px 0 24px 0;
+}
+
+.site-list__item:not(:last-child) {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.site-list__link {
+  @include mixins.oswald(20px, 20px);
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.site-list__link--active::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  top: 28px;
+  left: center;
+  background-color: #68b738;
+}

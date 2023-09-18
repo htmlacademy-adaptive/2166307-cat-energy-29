@@ -1,0 +1,39 @@
+@use "./common/mixins";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto 32px auto;
+}
+
+.form__header {
+  @include mixins.oswald(36px, 36px);
+  text-align: left;
+  margin: 0;
+  margin-bottom: 37px;
+  padding: 13px 20px 0 20px;
+  color: #000000;
+}
+
+.form__item {
+  border: 0;
+}
+
+.form__submit {
+  @include mixins.oswald(16px, 20px);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border: 0;
+  text-transform: uppercase;
+  background-color: #68b738;
+  color: #ffffff;
+  margin: 0 20px 21px 20px;
+}
+
+.form__footnote {
+  @include mixins.lato(14px, 16px);
+  color: #000000;
+  text-align: center;
+}

@@ -1,0 +1,28 @@
+@use "./common/mixins";
+
+.supplements {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 20px;
+  margin-bottom: 34px;
+}
+
+.supplements__title {
+  @include mixins.oswald(24px, 26px);
+  color: #000000;
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.supplements__checkbox-label {
+  @include mixins.oswald(16px, 18px);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.supplements__checkbox-label:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,13 @@
+@use "./common/mixins";
+
+.social__list {
+  @include mixins.list_off;
+  display: flex;
+  gap: 24px;
+}
+
+.social__item {
+  display: block;
+  width: 28px;
+  height: 22px;
+}

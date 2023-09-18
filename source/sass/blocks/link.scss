@@ -1,0 +1,21 @@
+@use "./common/mixins";
+
+.link {
+  @include mixins.oswald(16px, 20px);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #68b738;
+  color: #ffffff;
+}
+
+.link--easy {
+  justify-content: left;
+  padding: 10px 0;
+  background-color: transparent;
+  margin-right: 56px;
+  color: #000000;
+}
+

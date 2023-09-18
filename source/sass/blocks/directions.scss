@@ -1,0 +1,56 @@
+@use "./common/mixins";
+
+.directions__wrapper {
+  display: flex;
+  margin: 0 20px;
+}
+
+.directions__list {
+  @include mixins.list_off;
+}
+
+.directions__item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  padding: 30px 33px 18px 20px;
+  margin-bottom: 20px;
+}
+
+.directions__item--slim::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 53px;
+  top: 21px;
+  left: 20px;
+  background-image: url("../../img/cat_back_slim.svg");
+}
+
+.directions__item--fat::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 50px;
+  top: 24px;
+  left: 15px;
+  background-image: url("../../img/cat_back_fat.svg");
+}
+
+.directions__title {
+  @include mixins.oswald(24px, 37px);
+  text-transform: uppercase;
+  margin: 0;
+  margin-left: 70px;
+  margin-bottom: 29px;
+  color: #000000;
+}
+
+
+.directions__description {
+  margin: 0;
+  margin-bottom: 38px;
+}

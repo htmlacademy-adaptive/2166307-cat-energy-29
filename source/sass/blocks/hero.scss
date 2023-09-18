@@ -1,0 +1,47 @@
+@use "./common/mixins";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+  background-image: url("../../img/hero_cat.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: #ffffff;
+}
+
+.hero__wrapper {
+  padding: 29px 0 3px 0;
+  background: linear-gradient(to bottom, #68b738d9 302px, #ffffff 114px, #ffffff 60%, #ffffff 100%);
+}
+
+.hero__title {
+  @include mixins.oswald(36px, 36px);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.hero__slogan {
+  @include mixins.oswald(14px, 14px);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 29px;
+}
+
+.hero__image {
+  display: flex;
+  align-items: center;
+  width: 320px;
+  margin-bottom: 3px;
+}
+
+.hero__link {
+  display: flex;
+  width: 280px;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}

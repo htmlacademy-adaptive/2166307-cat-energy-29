@@ -1,0 +1,49 @@
+@use "./common/mixins";
+
+.benefits__header {
+  @include mixins.oswald(36px, 40px);
+  margin: 0;
+  margin-bottom: 32px;
+  color: #000000;
+}
+
+.benefits__wrapper {
+  display: flex;
+  margin-bottom: 49px;
+}
+
+.benefits__list {
+  @include mixins.list_off;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.benefits__item {
+  position: relative;
+  margin-left: 100px;
+}
+
+.benefits__item--nutrient::before {
+  @include mixins.icon_element();
+  background-image: url("../../img/nutrient_icon.svg");
+}
+
+.benefits__item--practical::before {
+  @include mixins.icon_element();
+  background-image: url("../../img/practical_icon.svg");
+}
+
+.benefits__item--economic::before {
+  @include mixins.icon_element();
+  background-image: url("../../img/economic_icon.svg");
+}
+
+.benefits__item--efficient::before {
+  @include mixins.icon_element();
+  background-image: url("../../img/efficient_icon.svg");
+}
+
+.benefits__description {
+  margin: 0;
+}

@@ -1,0 +1,24 @@
+@use "./common/mixins";
+
+.goal {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 22px 20px 19px 20px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.goal__radio-label {
+  @include mixins.oswald(16px, 18px);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.goal__radio-label:last-child {
+  margin-bottom: 0;
+}
+

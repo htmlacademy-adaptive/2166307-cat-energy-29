@@ -1,0 +1,36 @@
+.main-header {
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0 14px 0;
+  flex-wrap: wrap;
+}
+
+.main-header__logo {
+  display: flex;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-header__toggle {
+  display: block;
+  width: 18.2px;
+  height: 18px;
+  border: 0;
+  background-image: url("../../img/toggle_disabled.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+

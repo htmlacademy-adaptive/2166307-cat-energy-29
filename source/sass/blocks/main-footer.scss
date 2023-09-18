@@ -1,0 +1,20 @@
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.main-footer__logo {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsl(0, 0%, 85%);
+}
+
+.main-footer__social {
+  display: flex;
+  padding: 0 74px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsl(0, 0%, 85%);
+}
+

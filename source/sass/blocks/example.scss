@@ -1,0 +1,62 @@
+@use "./common/mixins";
+
+.example {
+  background-color: #eaeaea;
+}
+
+.example__wrapper {
+  padding: 25px 20px 40px 20px;
+}
+
+.example__header {
+  @include mixins.oswald(36px, 40px);
+  color: #000000;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.example__description {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.example__report {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.example__point {
+  display: flex;
+  flex-direction: column;
+  width: 124px;
+  gap: 7.5px;
+  align-items: center;
+}
+
+.example__number {
+  @include mixins.oswald(24px, 24px);
+  color: #000000;
+}
+
+.example__specification {
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.example__conclusion {
+  @include mixins.oswald(14px, 20px);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.example__slider-wrapper {
+  max-width: 320px;
+}
+

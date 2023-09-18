@@ -1,0 +1,17 @@
+@use "./common/mixins";
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  @include mixins.lato(14px, 18px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: #444444;
+}
