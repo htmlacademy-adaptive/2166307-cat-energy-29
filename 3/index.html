@@ -25,8 +25,8 @@
     <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--active">
               Главная
             </a>
           </li>
@@ -129,21 +129,26 @@
         <p class="example__conclusion">
           Затраты на питание: 15 000 руб.
         </p>
-        <div class="example__slider-wrapper">
           <div class="compare-slider">
             <figure class="compare-slider__illustration">
-              <div class="compare-slider__handle"></div>
-              <div class="compare-slider__divisor"></div>
+              <img class="compare-slider__image" src="img/slim_cat.png" width="280" height="256"
+          alt="Стройный кот после применения «Кэт энерджи».">
+              <div class="compare-slider__handle">
+              </div>
+              <div class="compare-slider__divisor">
+                <img class="compare-slider__divisor-image" src="img/fat_cat.png" width="280" height="256"
+                alt="Толстый кот до применения «Кэт энерджи».">
+              </div>
             </figure>
-            <input class="compare-slider__input" type="range" min="0" max="87.5" value="44" step="0.25">
+            <label class="visually-hidden" for="slider_input">Сравнительный слайдер</label>
+            <input class="compare-slider__input" id="slider_input" type="range" min="0.75" max="87.5" value="44" step="0.25">
           </div>
-        </div>
       </div>
     </section>
 
     <section class="location">
       <h2 class="visually-hidden">Адрес магазина</h2>
-      <div class="location__wrapper">
+      <div class="location__wrapper location__wrapper--neutral">
         <p class="location__call">
           Приглашаем к сотрудничеству дилеров!
         </p>

@@ -25,8 +25,8 @@
     <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"  href="index.html">
-            <a class="site-list__link">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
@@ -35,8 +35,8 @@
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">
+          <li class="site-list__item">
+            <a class="site-list__link  site-list__link--active">
               Подбор программы
             </a>
           </li>
@@ -51,58 +51,69 @@
       <fieldset class="form__item pet">
         <h2 class="pet__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
         <div class="pet__wrapper">
-          <label class="pet__field-label" for="cat_name">Имя:*</label>
-          <input class="pet__field-control input" type="text" id="cat_name" name="form__cat-name" placeholder="Барсик"
-            required>
-          <label class="pet__field-label" for="cat_weight">Вес (кг):*</label>
-          <input class="pet__field-control input" type="number" id="cat_weight" name="form__cat-weight" placeholder="7"
-            required>
-          <label class="pet__field-label" for="cat_age">Возраст (лет):</label>
-          <input class="pet__field-control input" type="number" id="cat_age" name="form__cat-age" placeholder="7">
+          <label class="pet__field-label" for="cat_name">Имя:*
+            <input class="pet__field-control input" type="text" id="cat_name" name="form__cat-name" placeholder="Барсик"
+              required>
+          </label>
+          <label class="pet__field-label" for="cat_weight">Вес (кг):*
+            <input class="pet__field-control input" type="number" id="cat_weight" name="form__cat-weight"
+              placeholder="7" required>
+          </label>
+          <label class="pet__field-label" for="cat_age">Возраст (лет):
+            <input class="pet__field-control input" type="number" id="cat_age" name="form__cat-age" placeholder="7">
+          </label>
         </div>
       </fieldset>
       <fieldset class="form__item goal">
+        <label class="goal__radio-label" for="slim">
         <input class="goal__radio-control radio" type="radio" id="slim" name="form__cat-status" value="fatty" checked>
-        <label class="goal__radio-label" for="slim">Похудение</label>
+        Похудение</label>
+        <label class="goal__radio-label" for="gain">
         <input class="goal__radio-control radio" type="radio" id="gain" name="form__cat-status" value="skinny">
-        <label class="goal__radio-label" for="gain">Набор массы</label>
+        Набор массы</label>
+        <label class="goal__radio-label" for="advice">
         <input class="goal__radio-control radio" type="radio" id="advice" name="form__cat-status" value="question">
-        <label class="goal__radio-label" for="advice">Не знаю (Нужен ваш совет)</label>
+        Не знаю (Нужен ваш совет)</label>
       </fieldset>
       <fieldset class="form__item owner">
         <h2 class="owner__title">Контактные данные (владельца кота)</h2>
         <div class="owner__wrapper">
-          <label class="owner__field-label" for="owner_mail">E-mail:*</label>
+          <label class="owner__field-label" for="owner_mail">E&minus;mail:*
           <input class="owner__field-control input" type="email" id="owner_mail" name="form__owner-email"
             placeholder="kuklachev@gmail.com" required>
-          <label class="owner__field-label" for="owner_phone">Телефон:*</label>
+          </label>
+          <label class="owner__field-label" for="owner_phone">Телефон:*
           <input class="owner__field-control input" type="text" id="owner_phone" name="form__owner-phone"
             placeholder="8 (960) 900-60-90" required>
+          </label>
         </div>
       </fieldset>
       <fieldset class="form__item habits">
         <h2 class="habits__title">Комментарий</h2>
-        <label class="habits__field-lable" for="owner_comment">Расскажите обо всех повадках кота</label>
-        <textarea class="habits__field input" id="owner_comment" name="customer_comment"></textarea>
+        <textarea class="habits__field textarea" id="owner_comment" name="customer_comment" placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
       <fieldset class="form__item supplements">
-        <h2 class="supplements__title">Дополнительные детали запроса</h2>
+        <h2 class="supplements__title">Дополнительно</h2>
         <div class="supplements__wrapper">
+          <label class="supplements__checkbox-label" for="sweetener">
           <input class="supplements__checkbox-control checkbox" type="checkbox" id="sweetener" name="request_details"
             value="sweetener" checked>
-          <label class="supplements__checkbox-label" for="sweetener">Сахарозаменитель</label>
+          Сахарозаменитель</label>
+          <label class="supplements__checkbox-label" for="water">
           <input class="supplements__checkbox-control checkbox" type="checkbox" id="water" name="request_details"
             value="water">
-          <label class="supplements__checkbox-label" for="water">Питьевая вода</label>
+          Питьевая вода</label>
+          <label class="supplements__checkbox-label" for="milk">
           <input class="supplements__checkbox-control checkbox" type="checkbox" id="milk" name="request_details"
             value="milk">
-          <label class="supplements__checkbox-label" for="milk">Молоко</label>
+          Молоко</label>
+          <label class="supplements__checkbox-label" for="vitamins">
           <input class="supplements__checkbox-control checkbox" type="checkbox" id="vitamins" name="request_details"
             value="vitamins">
-          <label class="supplements__checkbox-label" for="vitamins">Витамины</label>
+          Витамины</label>
         </div>
       </fieldset>
-      <button class="form__submit button" type="submit">Заказать</button>
+      <button class="form__submit button" type="submit">Отправить заявку</button>
       <p class="form__footnote">* — Обязательные поля</p>
     </form>
 
@@ -182,6 +193,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/mobile-menu.js"></script>
 </body>
 
 </html>
