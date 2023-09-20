@@ -29,13 +29,36 @@
 
 .owner__title {
   @include mixins.oswald(24px, 26px);
+  position: relative;
   color: #000000;
   margin: 0;
   margin-bottom: 35px;
 
+  &::after {
+    @include mixins.line(93px, 15px, 197px);
+  }
+
   @media (min-width: global.$tablet-width) {
     @include mixins.oswald(36px, 36px);
     margin-bottom: 76px;
+
+    &::before {
+      @include mixins.line(30px, 20px, -70px);
+    }
+
+    &::after {
+      @include mixins.line(146px, 20px, 552px);
+    }
+  }
+
+  @media (min-width: global.$desktop-width) {
+    &::before {
+      @include mixins.line(70px, 20px, -110px);
+    }
+
+    &::after {
+      @include mixins.line(778px, 20px, 552px);
+    }
   }
 }
 

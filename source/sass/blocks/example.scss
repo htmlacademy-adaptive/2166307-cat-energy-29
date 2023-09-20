@@ -63,6 +63,7 @@
 }
 
 .example__description {
+  @include mixins.lato(14px, 18px);
   margin: 0;
   margin-bottom: 20px;
 
@@ -139,6 +140,7 @@
 }
 
 .example__specification {
+  display: flex;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
@@ -146,6 +148,14 @@
   background: #eaeaea;
   padding: 0 20px;
   z-index: 2;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.lato(14px, 14px);
+    padding: 0;
+    width: 224px;
+    height: 14px;
+    flex-wrap: nowrap;
+  }
 }
 
 .example__conclusion {
@@ -166,7 +176,7 @@
     margin-left: auto;
   }
 
-  @media (min-width: global.$tablet-width) {
+  @media (min-width: global.$desktop-width) {
     text-align: left;
     width: 436px;
     margin: 0;

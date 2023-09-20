@@ -22,14 +22,7 @@
   margin-bottom: 38px;
 
   &::after {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: 20px;
-    left: 200px;
-    background-color: #68b738;
+    @include mixins.line(159px, 15px, 135px);
   }
 
   @media (min-width: global.$tablet-width) {
@@ -37,16 +30,23 @@
     padding: 0;
     margin-bottom: 87px;
 
-    // &::before {
-    //   display: flex;
-    //   content: "";
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 2px;
-    //   top: 30px;
-    //   left: 200px;
-    //   background-color: #68b738;
-    // }
+    &::before {
+      @include mixins.line(30px, 20px, -70px);
+    }
+
+    &::after {
+      @include mixins.line(476px, 20px, 222px);
+    }
+  }
+
+  @media (min-width: global.$desktop-width) {
+    &::before {
+      @include mixins.line(70px, 20px, -110px);
+    }
+
+    &::after {
+      @include mixins.line(1108px, 20px, 222px);
+    }
   }
 }
 

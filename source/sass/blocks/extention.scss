@@ -22,12 +22,42 @@
 
 .extention__action {
   @include mixins.oswald(16px, 20px);
+  position: relative;
   padding-top: 53px;
   text-transform: uppercase;
   color: #111111;
   margin: 0;
   margin-bottom: 8px;
   text-align: center;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: 90px;
+    background-image: url("../../img/plus.svg");
+  }
+
+  @media (min-width: global.$tablet-width) {
+    &::before {
+      width: 60px;
+      height: 60px;
+      top: -65px;
+      left: 75px;
+      background-image: url("../../img/plus.svg");
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: global.$desktop-width) {
+    &::before {
+      top: -70px;
+      left: 55px;
+    }
+  }
 }
 
 .extention__promise {
