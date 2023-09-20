@@ -131,9 +131,36 @@
 
 .directions__link {
   @include mixins.oswald(16px, 16px);
+  position: relative;
   padding: 4px 56px 4px 0;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 1px;
+    top: -15px;
+    left: 0;
+    background-color: #d9d9d9;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 10px;
+    top: 8px;
+    left: 100px;
+    background-image: url("../../img/arrow_icon.svg");
+  }
 
   @media (min-width: global.$tablet-width) {
     @include mixins.oswald(20px, auto);
+
+    &::before {
+      display: none;
+    }
   }
 }

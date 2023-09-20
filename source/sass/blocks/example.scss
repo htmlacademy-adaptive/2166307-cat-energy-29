@@ -77,12 +77,39 @@
 }
 
 .example__report {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 32px;
   flex-wrap: wrap;
   margin: 0;
   margin-bottom: 20px;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 124px;
+    height: 56px;
+    top: -15px;
+    left: 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 124px;
+    height: 56px;
+    top: -15px;
+    right: 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
 
   @media (min-width: global.$tablet-width) {
     width: 367px;
@@ -98,13 +125,17 @@
   display: flex;
   flex-direction: column;
   width: 124px;
-  gap: 7.5px;
+  gap: 7.53px;
   align-items: center;
 }
 
 .example__number {
   @include mixins.oswald(24px, 24px);
   color: #000000;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(30px, 37px);
+  }
 }
 
 .example__specification {
@@ -112,15 +143,20 @@
   line-height: 12px;
   text-align: center;
   margin: 0 auto;
+  background: #eaeaea;
+  padding: 0 20px;
+  z-index: 2;
 }
 
 .example__conclusion {
   @include mixins.oswald(14px, 20px);
   display: flex;
+  width: 188px;
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 20px;
 
   @media (min-width: global.$tablet-width) {
@@ -137,12 +173,3 @@
   }
 }
 
-// .example__slider-wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   max-width: 320px;
-
-//   @media (min-width: global.$tablet-width) {
-//     max-width: 560px;
-//   }
-// }
