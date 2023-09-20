@@ -1,3 +1,5 @@
+@use "./common/global";
+
 @mixin icon_element {
   display: block;
   content: "";
@@ -6,6 +8,14 @@
   height: 60px;
   top: 0;
   left: -80px;
+
+  @media (min-width: global.$tablet-width) {
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    left: 0;
+  }
 }
 
 @mixin oswald($oswald_size, $oswald_line) {
@@ -28,7 +38,7 @@
   margin: 0;
 }
 
-@mixin slow_apperance {
+@mixin slow_apperance($apperance_time) {
   @keyframes fadeInFromNone {
     0% {
       display: none;
@@ -45,6 +55,10 @@
       opacity: 1;
     }
   }
-  animation: fadeInFromNone 0.6s ease-in-out;
+  animation: fadeInFromNone $apperance_time ease-in-out;
+
+  @media (min-width: global.$tablet-width) {
+    animation: none;
+  }
 }
 

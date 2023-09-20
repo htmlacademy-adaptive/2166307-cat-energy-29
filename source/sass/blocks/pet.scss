@@ -1,13 +1,28 @@
 @use "./common/mixins";
+@use "./common/global";
 
 .pet {
   margin: 0 auto 24px auto;
   padding: 0 20px;
+
+  @media (min-width: global.$tablet-width) {
+    padding: 0;
+    width: 628px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 570px;
+    padding-right: 650px;
+  }
 }
 
 .pet__wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: global.$tablet-width) {
+    margin-bottom: 72px;
+  }
 }
 
 .pet__title {
@@ -15,6 +30,14 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 39px;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, 30px);
+    display: flex;
+    width: 323px;
+    flex-wrap: wrap;
+    margin-bottom: 66px;
+  }
 }
 
 .pet__field-label {
@@ -24,6 +47,11 @@
   text-transform: uppercase;
   margin-bottom: 14px;
   white-space: nowrap;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, 20px);
+    margin-bottom: 20px;
+  }
 }
 
 .pet__field-label:last-child {

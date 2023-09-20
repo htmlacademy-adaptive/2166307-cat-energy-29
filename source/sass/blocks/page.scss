@@ -1,4 +1,5 @@
 @use "./common/mixins";
+@use "./common/global";
 
 .page {
   height: 100%;
@@ -14,4 +15,17 @@
   margin: 0 auto;
   background-color: #ffffff;
   color: #444444;
+  overflow: hidden;
+
+  @media (min-width: global.$tablet-width) {
+    width: 768px;
+    border: 1px solid #444444;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    position: relative;
+    width: 1440px;
+    border: 1px solid #444444;
+  }
 }
+

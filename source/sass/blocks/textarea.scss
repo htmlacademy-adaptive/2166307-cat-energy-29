@@ -1,4 +1,5 @@
 @use "./common/mixins";
+@use "./common/global";
 
 .textarea {
   @include mixins.oswald(16px, 18px);
@@ -8,6 +9,16 @@
   padding: 14px 15px;
   text-transform: uppercase;
   resize: none;
+  box-sizing: border-box;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, 30px);
+    padding: 0;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 1220px;
+  }
 }
 
 .textarea::placeholder {

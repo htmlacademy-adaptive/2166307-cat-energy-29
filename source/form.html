@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
@@ -19,29 +20,30 @@
         <img class="logo__text" src="img/cat-energy_text.svg" width="128" height="24"
           alt="Текстовый логотип магазина «Кэт энерджи».">
       </a>
-      <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <button class="main-header__toggle" type="button" value="off"><span class="visually-hidden">Открыть меню</span></button>
+
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link  site-list__link--active">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
-    <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link  site-list__link--active">
-              Подбор программы
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
   </header>
   <main class="form-container">
     <form class="form" action="https://echo.htmlacademy.ru/" method="post" id="request_form">
@@ -65,51 +67,52 @@
       </fieldset>
       <fieldset class="form__item goal">
         <label class="goal__radio-label" for="slim">
-        <input class="goal__radio-control radio" type="radio" id="slim" name="form__cat-status" value="fatty" checked>
-        Похудение</label>
+          <input class="goal__radio-control radio" type="radio" id="slim" name="form__cat-status" value="fatty" checked>
+          Похудение</label>
         <label class="goal__radio-label" for="gain">
-        <input class="goal__radio-control radio" type="radio" id="gain" name="form__cat-status" value="skinny">
-        Набор массы</label>
+          <input class="goal__radio-control radio" type="radio" id="gain" name="form__cat-status" value="skinny">
+          Набор массы</label>
         <label class="goal__radio-label" for="advice">
-        <input class="goal__radio-control radio" type="radio" id="advice" name="form__cat-status" value="question">
-        Не знаю (Нужен ваш совет)</label>
+          <input class="goal__radio-control radio" type="radio" id="advice" name="form__cat-status" value="question">
+          Не знаю (Нужен ваш совет)</label>
       </fieldset>
       <fieldset class="form__item owner">
         <h2 class="owner__title">Контактные данные (владельца кота)</h2>
         <div class="owner__wrapper">
           <label class="owner__field-label" for="owner_mail">E&minus;mail:*
-          <input class="owner__field-control input" type="email" id="owner_mail" name="form__owner-email"
-            placeholder="kuklachev@gmail.com" required>
+            <input class="owner__field-control input" type="email" id="owner_mail" name="form__owner-email"
+              placeholder="kuklachev@gmail.com" required>
           </label>
           <label class="owner__field-label" for="owner_phone">Телефон:*
-          <input class="owner__field-control input" type="text" id="owner_phone" name="form__owner-phone"
-            placeholder="8 (960) 900-60-90" required>
+            <input class="owner__field-control input" type="text" id="owner_phone" name="form__owner-phone"
+              placeholder="8 (960) 900-60-90" required>
           </label>
         </div>
       </fieldset>
       <fieldset class="form__item habits">
         <h2 class="habits__title">Комментарий</h2>
-        <textarea class="habits__field textarea" id="owner_comment" name="customer_comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <textarea class="habits__field textarea" id="owner_comment" name="customer_comment"
+          placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
       <fieldset class="form__item supplements">
         <h2 class="supplements__title">Дополнительно</h2>
         <div class="supplements__wrapper">
           <label class="supplements__checkbox-label" for="sweetener">
-          <input class="supplements__checkbox-control checkbox" type="checkbox" id="sweetener" name="request_details"
-            value="sweetener" checked>
-          Сахарозаменитель</label>
+            <input class="supplements__checkbox-control checkbox" type="checkbox" id="sweetener" name="request_details"
+              value="sweetener" checked>
+            Сахарозаменитель</label>
           <label class="supplements__checkbox-label" for="water">
-          <input class="supplements__checkbox-control checkbox" type="checkbox" id="water" name="request_details"
-            value="water">
-          Питьевая вода</label>
+            <input class="supplements__checkbox-control checkbox" type="checkbox" id="water" name="request_details"
+              value="water">
+            Питьевая вода</label>
           <label class="supplements__checkbox-label" for="milk">
-          <input class="supplements__checkbox-control checkbox" type="checkbox" id="milk" name="request_details"
-            value="milk">
-          Молоко</label>
+            <input class="supplements__checkbox-control checkbox" type="checkbox" id="milk" name="request_details"
+              value="milk">
+            Молоко</label>
           <label class="supplements__checkbox-label" for="vitamins">
-          <input class="supplements__checkbox-control checkbox" type="checkbox" id="vitamins" name="request_details"
-            value="vitamins">
-          Витамины</label>
+            <input class="supplements__checkbox-control checkbox" type="checkbox" id="vitamins" name="request_details"
+              value="vitamins">
+            Витамины</label>
         </div>
       </fieldset>
       <button class="form__submit button" type="submit">Отправить заявку</button>

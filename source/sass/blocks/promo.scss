@@ -1,4 +1,5 @@
 @use "./common/mixins";
+@use "./common/global";
 
 .promo {
   display: flex;
@@ -6,6 +7,23 @@
   flex-direction: column;
   background-image: url("../../img/cat_bag.png");
   margin: 0 auto 61px auto;
+
+  @media (min-width: global.$tablet-width) {
+    width: 707px;
+    margin: 0 auto 70px auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    position: absolute;
+    width: 245px;
+    min-height: 288px;
+    bottom: 670px;
+    right: 110px;
+    margin: 0;
+    background-repeat: no-repeat;
+  }
 }
 
 .promo__wrapper {
@@ -22,6 +40,14 @@
   padding: 187px 0 43px 0;
   margin: 0 auto;
   color: #ffffff;
+
+  @media (min-width: global.$tablet-width) {
+    padding: 71px 125px 69px 421px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    padding: 185px 42px 43px 42px;
+  }
 }
 
 .promo__description::before {
@@ -33,4 +59,13 @@
   top: 59px;
   left: 39px;
   background-image: url("../../img/gift_icon.svg");
+
+  @media (min-width: global.$tablet-width) {
+    top: 59px;
+    left: 120px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    left: 85px;
+  }
 }

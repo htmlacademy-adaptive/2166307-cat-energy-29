@@ -1,9 +1,15 @@
 @use "./common/mixins";
+@use "./common/global";
 
 .social__list {
   @include mixins.list_off;
   display: flex;
   gap: 24px;
+
+  @media (min-width: global.$tablet-width) {
+    width: 132px;
+    margin-left: 40px;
+  }
 }
 
 .social__item {

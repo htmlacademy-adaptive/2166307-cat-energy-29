@@ -1,11 +1,49 @@
 @use "./common/mixins";
+@use "./common/global";
 
 .example {
+  display: flex;
+  margin: 0 auto;
   background-color: #eaeaea;
+
+  @media (min-width: global.$tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 1440px;
+  }
 }
 
 .example__wrapper {
+  display: flex;
   padding: 25px 20px 40px 20px;
+  flex-wrap: wrap;
+
+  @media (min-width: global.$tablet-width) {
+    padding: 0;
+    width: 708px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    padding: 0;
+    width: 1440px;
+    flex-direction: row;
+    gap: 224px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+  }
+}
+
+.example__data-wrapper {
+  @media (min-width: global.$desktop-width) {
+    display: flex;
+    flex-direction: column;
+    width: 436px;
+    margin-left: 110px;
+  }
 }
 
 .example__header {
@@ -13,11 +51,29 @@
   color: #000000;
   margin: 0;
   margin-bottom: 40px;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(60px, 60px);
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__description {
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.lato(16px, 24px);
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    margin-bottom: 69px;
+  }
 }
 
 .example__report {
@@ -25,7 +81,17 @@
   justify-content: center;
   gap: 32px;
   flex-wrap: wrap;
+  margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: global.$tablet-width) {
+    width: 367px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 366px;
+    margin-bottom: 55px;
+  }
 }
 
 .example__point {
@@ -50,13 +116,33 @@
 
 .example__conclusion {
   @include mixins.oswald(14px, 20px);
+  display: flex;
+  align-items: center;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, 20px);
+    width: 180px;
+    text-align: right;
+    margin-left: auto;
+  }
+
+  @media (min-width: global.$tablet-width) {
+    text-align: left;
+    width: 436px;
+    margin: 0;
+  }
 }
 
-.example__slider-wrapper {
-  max-width: 320px;
-}
+// .example__slider-wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   max-width: 320px;
 
+//   @media (min-width: global.$tablet-width) {
+//     max-width: 560px;
+//   }
+// }

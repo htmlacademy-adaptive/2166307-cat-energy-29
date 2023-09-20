@@ -1,4 +1,5 @@
 @use "./common/mixins";
+@use "./common/global";
 
 .extention {
   display: flex;
@@ -7,6 +8,16 @@
   align-items: center;
   padding: 25px 0;
   margin: 0 auto;
+
+  @media (min-width: global.$tablet-width) {
+    width: 100%;
+    padding: 0;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 169px;
+    padding: 0;
+  }
 }
 
 .extention__action {
@@ -16,12 +27,14 @@
   color: #111111;
   margin: 0;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .extention__promise {
   @include mixins.lato(12px, 16px);
   margin: 0;
   margin-bottom: 21px;
+  text-align: center;
 }
 
 .extention__link {
@@ -29,4 +42,8 @@
   margin: 0 20px;
   background-color: #f2f2f2;
   color: #444444;
+
+  @media (min-width: global.$tablet-width) {
+    margin: 0;
+  }
 }

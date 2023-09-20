@@ -1,14 +1,41 @@
 @use "./common/mixins";
+@use "./common/global";
+
+.location {
+  @media (min-width: global.$tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    display: flex;
+    position: relative;
+    width: 1440px;
+  }
+}
 
 .location__wrapper {
   display: flex;
   padding: 26px 20px;
   flex-wrap: wrap;
   background-color: #f2f2f2;
+
+  @media (min-width: global.$tablet-width) {
+    padding: 60px 70px;
+    justify-content: space-between;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 407px;
+    padding: 60px 78px 60px 80px;
+  }
 }
 
 .location__wrapper--neutral {
-  background-color: transparent;
+  background-color: #ffffff;
 }
 
 .location__call {
@@ -19,6 +46,10 @@
   color: #000000;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, 26px);
+  }
 }
 
 .location__address {
@@ -27,6 +58,13 @@
   width: 140px;
   line-height: 20px;
   margin: 0;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.lato(16px, 20px);
+    width: 160px;
+    justify-content: space-between;
+    text-align: right;
+  }
 }
 
 .location__map {
@@ -35,6 +73,20 @@
   background-image: url("../../img/location.png");
   width: 320px;
   height: 362px;
+
+  @media (min-width: global.$tablet-width) {
+    width: 709px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 1440px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .location__mark {
@@ -43,4 +95,14 @@
   height: 53px;
   padding: 139px 129px 170px 134px;
   z-index: 2;
+
+  @media (min-width: global.$tablet-width) {
+    width: 113px;
+    height: 106px;
+    padding: 146px 322px 148px 333px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    padding: 131px 419px 163px 908px;
+  }
 }

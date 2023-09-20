@@ -1,3 +1,5 @@
+@use "./common/global";
+
 .main-nav {
   display: flex;
   position: relative;
@@ -5,4 +7,10 @@
   width: 280px;
   color: #000000;
   background-color: #ffffff;
+
+  @media (min-width: global.$tablet-width) {
+    width: 436px;
+    flex-direction: none;
+    margin-left: 94px;
+  }
 }

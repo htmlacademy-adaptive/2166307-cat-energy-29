@@ -1,8 +1,14 @@
+@use "./common/global";
+
 .copyright {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  @media (min-width: global.$tablet-width) {
+    width: 168px;
+  }
 }
 
 .copyright__link {
@@ -10,4 +16,8 @@
   line-height: 20px;
   text-decoration: none;
   color: #444444;
+
+  // @media (min-width: global.$tablet-width) {
+  //   margin-right: 23px;
+  // }
 }
