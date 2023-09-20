@@ -1,23 +1,64 @@
 @use "./common/mixins";
+@use "./common/global";
 
 .offer__title {
   @include mixins.oswald(16px, 16px);
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 13px;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, 20px);
+  }
+
+  @media (min-width: global.$desktop-width) {
+    margin-right: auto;
+  }
 }
 
 .offer__list {
   @include mixins.list_off;
   @include mixins.lato(14px, 14px);
   margin-bottom: 15px;
+
+  @media (min-width: global.$tablet-width) {
+    margin-left: auto;
+    width: 223px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    margin-left: 0;
+    width: 285px;
+  }
 }
 
 
 .offer__number {
   float: right;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.lato(16px, 20px);
+  }
 }
 
 .offer__description {
   margin: 0;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.lato(16px, 20px);
+  }
 }
+
+.offer__link {
+  @media (min-width: global.$tablet-width) {
+    width: 100%;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 244px;
+    margin-bottom: 0;
+    margin-left: 40px;
+  }
+}
+

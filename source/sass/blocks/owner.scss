@@ -1,10 +1,30 @@
 @use "./common/mixins";
+@use "./common/global";
 
 .owner {
   display: flex;
   flex-direction: column;
   margin: 0 auto 24px auto;
   padding: 0 20px;
+
+  @media (min-width: global.$tablet-width) {
+    width: 628px;
+    padding: 0;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: global.$tablet-width) {
+    width: 1220px;
+    margin-bottom: 70px;
+  }
+}
+
+.owner__wrapper {
+  @media (min-width: global.$desktop-width) {
+    display: flex;
+    gap: 81px;
+    flex-wrap: wrap;
+  }
 }
 
 .owner__title {
@@ -12,6 +32,11 @@
   color: #000000;
   margin: 0;
   margin-bottom: 35px;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(36px, 36px);
+    margin-bottom: 76px;
+  }
 }
 
 .owner__field-label {
@@ -20,6 +45,11 @@
   align-items: center;
   text-transform: uppercase;
   margin-bottom: 14px;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, 20px);
+    width: 569px;
+  }
 }
 
 .owner__field-label:last-child {

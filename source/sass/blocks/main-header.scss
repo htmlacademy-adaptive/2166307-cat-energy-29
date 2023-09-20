@@ -1,7 +1,13 @@
+@use "./common/global";
+
 .main-header {
   background-color: #ffffff;
   margin: 0 auto;
   padding: 0 20px;
+
+  @media (min-width: global.$tablet-width) {
+    padding: 0;
+  }
 }
 
 .main-header__wrapper {
@@ -10,6 +16,17 @@
   align-items: center;
   padding: 13px 0 14px 0;
   flex-wrap: wrap;
+
+  @media (min-width: global.$tablet-width) {
+    width: 704px;
+    padding-left: 4px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 1220px;
+    padding: 0;
+    // background: linear-gradient(to left, #68b738d9 602px, #ffffff 114px, #ffffff 60%, #ffffff 100%);
+  }
 }
 
 .main-header__logo {
@@ -32,5 +49,8 @@
   background-image: url("../../img/toggle_disabled.svg");
   background-repeat: no-repeat;
   background-position: center center;
-}
 
+  @media (min-width: global.$tablet-width) {
+    display: none;
+  }
+}

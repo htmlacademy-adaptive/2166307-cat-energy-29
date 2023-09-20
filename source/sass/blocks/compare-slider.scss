@@ -1,12 +1,20 @@
-.example__slider-wrapper {
-  max-width: 320px;
-}
+@use "./common/global";
 
 .compare-slider {
   width: 100%;
   padding-bottom: 100%;
   overflow: hidden;
   position: relative;
+
+  @media (min-width: global.$tablet-width) {
+    width: 709px;
+    padding-bottom: 510px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 560px;
+    padding-bottom: 510px;
+  }
 }
 
 .compare-slider__illustration {
@@ -15,11 +23,32 @@
   width: 320px;
   height: 100%;
   margin: 0;
+
+  @media (min-width: global.$tablet-width) {
+    width: 560px;
+    left: 74.5px;
+  }
 }
 
 .compare-slider__divisor-image {
   position: absolute;
   left: 55%;
+
+  @media (min-width: global.$tablet-width) {
+    width: 560px;
+    height: 512px;
+    object-fit: cover;
+    text-align: center;
+  }
+}
+
+.compare-slider__image {
+  @media (min-width: global.$tablet-width) {
+    width: 560px;
+    height: 512px;
+    object-fit: cover;
+    text-align: center;
+  }
 }
 
 .compare-slider__divisor {
@@ -30,6 +59,10 @@
   box-shadow: 0 5px 10px -2px #0000004d;
   bottom: 0;
   height: 100%;
+
+  @media (min-width: global.$tablet-width) {
+    width: 560px;
+  }
 
   &::before,
   &::after {
@@ -93,6 +126,10 @@
   background-color: transparent;
   width: calc(100% + 45px);
   z-index: 2;
+
+  @media (min-width: global.$tablet-width) {
+    left: -60px;
+  }
 
   &:focus,
   &:active {

@@ -1,12 +1,37 @@
 @use "./common/mixins";
+@use "./common/global";
+
+.directions {
+  @media (min-width: global.$desktop-width) {
+    display: flex;
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
 
 .directions__wrapper {
   display: flex;
+  flex-direction: column;
   margin: 0 20px;
+
+  @media (min-width: global.$tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
 .directions__list {
   @include mixins.list_off;
+
+  @media (min-width: global.$desktop-width) {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+  }
 }
 
 .directions__item {
@@ -16,6 +41,22 @@
   background-color: #f2f2f2;
   padding: 30px 33px 18px 20px;
   margin-bottom: 20px;
+
+  @media (min-width: global.$tablet-width) {
+    width: 296px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 77px 330px 53px 82px;
+    border: 1px solid #008000;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    flex-direction: row;
+    width: 454px;
+    // width: 400px;
+    padding: 77px 61px 55px 52px;
+    flex-wrap: wrap;
+  }
 }
 
 .directions__item--slim::before {
@@ -27,6 +68,18 @@
   top: 21px;
   left: 20px;
   background-image: url("../../img/cat_back_slim.svg");
+
+  @media (min-width: global.$tablet-width) {
+    width: 200px;
+    height: 211px;
+    background-size: cover;
+    top: 91px;
+    left: 420px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    left: 220px;
+  }
 }
 
 .directions__item--fat::before {
@@ -38,6 +91,18 @@
   top: 24px;
   left: 15px;
   background-image: url("../../img/cat_back_fat.svg");
+
+  @media (min-width: global.$tablet-width) {
+    width: 268px;
+    height: 200px;
+    background-size: cover;
+    top: 91px;
+    left: 420px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    left: 220px;
+  }
 }
 
 .directions__title {
@@ -47,10 +112,28 @@
   margin-left: 70px;
   margin-bottom: 29px;
   color: #000000;
+
+  @media (min-width: global.$tablet-width) {
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
 }
 
 
 .directions__description {
   margin: 0;
   margin-bottom: 38px;
+
+  @media (min-width: global.$tablet-width) {
+    margin-bottom: 48px;
+  }
+}
+
+.directions__link {
+  @include mixins.oswald(16px, 16px);
+  padding: 4px 56px 4px 0;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, auto);
+  }
 }

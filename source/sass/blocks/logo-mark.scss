@@ -1,6 +1,15 @@
+@use "./common/global";
+
 .logo-mark__pin {
   display: block;
   width: 57px;
   height: 53px;
   background-image: url("../../img/map_pin.svg");
+
+  @media (min-width: global.$tablet-width) {
+    width: 113px;
+    height: 106px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }

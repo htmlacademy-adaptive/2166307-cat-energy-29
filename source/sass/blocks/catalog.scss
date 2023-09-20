@@ -1,4 +1,5 @@
 @use "./common/mixins";
+@use "./common/global";
 
 .catalog__title {
   @include mixins.oswald(36px, 36px);
@@ -7,7 +8,17 @@
   margin-left: 20px;
   margin-bottom: 41px;
   padding-top: 13px;
-  color: #000000
+  color: #000000;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(60px, 60px);
+    margin-left: 30px;
+    margin-bottom: 84px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    margin-left: 110px;
+  }
 }
 
 .catalog__list {
@@ -16,6 +27,23 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 26px;
+
+  @media (min-width: global.$tablet-width) {
+    width: 708px;
+    flex-direction: row;
+    gap: 60px 60px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 1220px;
+    gap: 63px 80px;
+    margin: 0 auto;
+    margin-bottom: 76px;
+    flex-wrap: wrap;
+  }
 }
 
 .catalog__item {
@@ -24,8 +52,39 @@
   align-items: center;
   border-top: 1px solid #ebebeb;
   margin: 0;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+
+  @media (min-width: global.$tablet-width) {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    padding: 0 37px 40px 37px;
+    background: linear-gradient(to top, #f2f2f2 402px, #ffffff 114px, #ffffff 60%, #ffffff 100%);
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 169px;
+    padding: 10px 38px 40px 38px;
+  }
 }
 
 .catalog__item:last-child {
   border-bottom: 1px solid #ebebeb;
+
+  @media (min-width: global.$tablet-width) {
+    flex-direction: column;
+    align-items: center;
+    width: 324px;
+    padding: 160px 37px 40px 37px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 2px solid #f2f2f2;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    width: 245px;
+    padding: 10px 37.5px 0 37.5px;
+  }
 }
