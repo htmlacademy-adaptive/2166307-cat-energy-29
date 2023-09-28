@@ -4,20 +4,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
   flex-wrap: wrap;
+  color: #444444;
+
+  &:hover {
+    color: #444444;
+  }
+
+  &:active {
+    color: rgb(68, 68, 68, 30%);
+  }
 
   @media (min-width: global.$tablet-width) {
     width: 168px;
   }
 }
 
-.copyright__link {
-  font-size: 16px;
-  line-height: 20px;
-  text-decoration: none;
-  color: #444444;
+.copyright__academy {
+  color: #666666;
 
-  // @media (min-width: global.$tablet-width) {
-  //   margin-right: 23px;
-  // }
+  &:hover {
+    color: #68b738;
+  }
+
+  &:active {
+    color: rgb(104, 183, 56, 30%);
+  }
 }

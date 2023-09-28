@@ -11,18 +11,17 @@
   @media (min-width: global.$tablet-width) {
     width: 707px;
     margin: 0 auto 70px auto;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url("../../img/cat_bag_tablet.png");
   }
 
   @media (min-width: global.$desktop-width) {
     position: absolute;
     width: 245px;
     min-height: 288px;
-    bottom: 670px;
+    bottom: 645px;
     right: 110px;
     margin: 0;
-    background-repeat: no-repeat;
+    background-image: url("../../img/cat_bag_desktop.png");
   }
 }
 

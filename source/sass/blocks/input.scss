@@ -10,6 +10,22 @@
   margin-left: 13px;
   padding-left: 15px;
   text-transform: uppercase;
+  box-sizing: border-box;
+
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid #444444;
+  }
+
+  &:invalid {
+    outline: none;
+    border: 1px solid #e01b1b;
+  }
 
   @media (min-width: global.$tablet-width) {
     @include mixins.oswald(20px, 20px);
@@ -19,3 +35,4 @@
 .input::placeholder {
   color: #444444;
 }
+

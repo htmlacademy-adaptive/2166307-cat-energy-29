@@ -17,7 +17,6 @@
     gap: 33px;
     position: initial;
     margin-left: auto;
-    z-index: auto;
   }
 
   @media (min-width: global.$desktop-width) {
@@ -61,4 +60,22 @@
   top: 28px;
   left: center;
   background-color: #68b738;
+
+  @media (min-width: global.$desktop-width) {
+    @include mixins.oswald(20px, 24px);
+  }
 }
+
+
+.site-list__link--hero {
+  // @media (min-width: global.$desktop-width) {
+  //   color: #ffffff;
+  //   z-index: 2;
+  // }
+
+  @media (min-width: global.$desktop-width) {
+    color: #ffffff;
+    z-index: 2;
+  }
+}
+

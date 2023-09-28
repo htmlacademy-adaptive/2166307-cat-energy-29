@@ -71,18 +71,18 @@
   display: flex;
   flex-direction: column;
   background-image: url("../../img/location.png");
-  width: 320px;
+  width: 100%;
   height: 362px;
 
   @media (min-width: global.$tablet-width) {
-    width: 709px;
+    // width: 709px;
     height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   @media (min-width: global.$desktop-width) {
-    width: 1440px;
+    // width: 1440px;
     height: 400px;
     background-size: cover;
     background-repeat: no-repeat;

@@ -62,3 +62,13 @@
   }
 }
 
+@mixin line($line_width, $line_top, $line_left) {
+  display: block;
+  content: "";
+  position: absolute;
+  width: $line_width;
+  height: 2px;
+  top: $line_top;
+  left: $line_left;
+  background-color: #68b738;
+}

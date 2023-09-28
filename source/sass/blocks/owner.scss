@@ -29,18 +29,42 @@
 
 .owner__title {
   @include mixins.oswald(24px, 26px);
+  position: relative;
   color: #000000;
   margin: 0;
   margin-bottom: 35px;
 
+  &::after {
+    @include mixins.line(93px, 15px, 197px);
+  }
+
   @media (min-width: global.$tablet-width) {
     @include mixins.oswald(36px, 36px);
     margin-bottom: 76px;
+
+    &::before {
+      @include mixins.line(30px, 20px, -70px);
+    }
+
+    &::after {
+      @include mixins.line(146px, 20px, 552px);
+    }
+  }
+
+  @media (min-width: global.$desktop-width) {
+    &::before {
+      @include mixins.line(70px, 20px, -110px);
+    }
+
+    &::after {
+      @include mixins.line(778px, 20px, 552px);
+    }
   }
 }
 
 .owner__field-label {
   @include mixins.oswald(16px, 18px);
+  position: relative;
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -54,4 +78,36 @@
 
 .owner__field-label:last-child {
   margin-bottom: 0;
+}
+
+.owner__field-label--mail::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 16px;
+  left: 250px;
+  background-image: url("../../img/email_icon.svg");
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, 20px);
+    left: 535px;
+  }
+}
+
+.owner__field-label--phone::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  left: 250px;
+  background-image: url("../../img/phone_icon.svg");
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, 20px);
+    left: 535px;
+  }
 }

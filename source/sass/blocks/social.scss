@@ -17,3 +17,15 @@
   width: 28px;
   height: 22px;
 }
+
+.social__link {
+  color: #666666;
+
+  &:hover {
+    color: #68b738;
+  }
+
+  &:active {
+    color: rgb(104, 183, 56, 30%);
+  }
+}

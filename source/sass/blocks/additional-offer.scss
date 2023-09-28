@@ -23,13 +23,36 @@
 
 .additional-offer__header {
   @include mixins.oswald(24px, 24px);
+  position: relative;
   color: #000000;
   margin: 0;
   margin-bottom: 36px;
 
+  &::after {
+    @include mixins.line(54px, 15px, 255px);
+  }
+
   @media (min-width: global.$tablet-width) {
     @include mixins.oswald(36px, 36px);
     margin-bottom: 60px;
+
+    &::before {
+      @include mixins.line(30px, 20px, -70px);
+    }
+
+    &::after {
+      @include mixins.line(320px, 20px, 381px);
+    }
+  }
+
+  @media (min-width: global.$desktop-width) {
+    &::before {
+      @include mixins.line(70px, 20px, -110px);
+    }
+
+    &::after {
+      @include mixins.line(952px, 20px, 378px);
+    }
   }
 }
 

@@ -27,18 +27,186 @@
 }
 
 .goal__radio-label {
-  @include mixins.oswald(16px, 18px);
-  display: flex;
+  @include mixins.oswald(16px, 30px);
+  display: grid;
   align-items: center;
+  grid-template-columns: 1em auto;
+  gap: 30px;
   text-transform: uppercase;
-  margin-bottom: 13px;
 
   @media (min-width: global.$tablet-width) {
     @include mixins.oswald(20px, 20px);
   }
 }
 
-.goal__radio-label:last-child {
-  margin-bottom: 0;
+.goal__radio-label:not(:last-child) {
+  margin-bottom: 13px;
 }
 
+.goal__radio-label:hover {
+  opacity: 0.7;
+}
+
+// .goal__radio-label + .goal__radio-label {
+//   margin-top: 1em;
+// }
+
+// .goal__radio-label:focus-within {
+//   color: #663399;
+// }
+
+.goal__radio-control {
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  background-color: #ffffff;
+  // margin: 0;
+  color: #000000;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  box-sizing: border-box;
+}
+
+.goal__radio-control::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+  opacity: 3;
+  box-sizing: border-box;
+}
+
+.goal__radio-control:checked::before {
+  background-position: center center;
+  background-image: url("../../img/radio_active.svg");
+  background-repeat: no-repeat;
+}
+
+.goal__radio-control:hover::before {
+  opacity: 0.9;
+}
+
+.goal__radio-control:focus {
+  outline: none;
+}
+
+
+// .goal__radio-label {
+//   @include mixins.oswald(16px, 18px);
+//   display: flex;
+//   position: relative;
+//   cursor: pointer;
+//   align-items: center;
+//   text-transform: uppercase;
+//   margin-bottom: 13px;
+
+//   &::before {
+//     display: block;
+//     content: "";
+//     position: absolute;
+//     width: 30px;
+//     height: 30px;
+//     top: -30px;
+//     left: -40px;
+//     border: 1px solid #cdcdcd;
+//     border-radius: 30px;
+//     background-color: #129b34;
+//   }
+
+//   @media (min-width: global.$tablet-width) {
+//     @include mixins.oswald(20px, 20px);
+//   }
+// }
+
+// .goal__radio-control.goal__radio-control--slim,
+// .goal__radio-control.goal__radio-control--gain,
+// .goal__radio-control.goal__radio-control--advice {
+//   @include mixins.oswald(16px, 18px);
+//   display: block;
+//   width: 30px;
+//   height: 30px;
+//   margin: 0;
+//   margin-right: 13px;
+//   // opacity: 0;
+
+//   &::before {
+//     display: block;
+//     content: "";
+//     position: absolute;
+//     width: 30px;
+//     height: 30px;
+//     top: -30px;
+//     left: -60px;
+//     border: 1px solid #cdcdcd;
+//     border-radius: 30px;
+//     background-color: #70129b;
+//   }
+
+//   &:checked ~ .goal__radio-label::before {
+//     display: block;
+//     content: "";
+//     position: absolute;
+//     width: 30px;
+//     height: 30px;
+//     top: -30px;
+//     left: -40px;
+//     border: 1px solid #111111;
+//     border-radius: 30px;
+//     background-color: #7e2f2f;
+//   }
+
+//   &:hover ~ .goal__radio-label.goal__radio-control--slim {
+//     opacity: 0.6;
+//   }
+
+//   &:hover ~ .goal__radio-label.goal__radio-control--gain {
+//     opacity: 0.6;
+//   }
+
+//   &:hover ~ .goal__radio-label.goal__radio-control--advice {
+//     opacity: 0.6;
+//   }
+
+//   &:active + .goal__radio-label {
+//     opacity: 0.3;
+//   }
+
+
+//   @media (min-width: global.$tablet-width) {
+//     height: 40px;
+//     width: 40px;
+//   }
+// }
+
+
+// // .goal__radio-label {
+// //   @include mixins.oswald(16px, 18px);
+// //   display: flex;
+// //   position: relative;
+// //   align-items: center;
+// //   text-transform: uppercase;
+// //   margin-bottom: 13px;
+
+// //   &::before {
+// //     display: block;
+// //     content: "";
+// //     position: absolute;
+// //     width: 30px;
+// //     height: 30px;
+// //     top: 0;
+// //     left: 0;
+// //     border: 1px solid #cdcdcd;
+// //     border-radius: 30px;
+// //     background-color: #ffffff;
+// //   }
+
+// //   @media (min-width: global.$tablet-width) {
+// //     @include mixins.oswald(20px, 20px);
+// //   }
+// // }
+
+// // .goal__radio-label:last-child {
+// //   margin-bottom: 0;
+// // }

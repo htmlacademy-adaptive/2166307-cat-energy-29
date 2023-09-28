@@ -38,8 +38,14 @@
 }
 
 .example__data-wrapper {
-  @media (min-width: global.$desktop-width) {
+  @media (min-width: global.$tablet-width) {
     display: flex;
+    flex-direction: row;
+    width: 708px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: global.$desktop-width) {
     flex-direction: column;
     width: 436px;
     margin-left: 110px;
@@ -63,6 +69,7 @@
 }
 
 .example__description {
+  @include mixins.lato(14px, 18px);
   margin: 0;
   margin-bottom: 20px;
 
@@ -77,6 +84,7 @@
 }
 
 .example__report {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 32px;
@@ -84,8 +92,52 @@
   margin: 0;
   margin-bottom: 20px;
 
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 124px;
+    height: 56px;
+    top: -15px;
+    left: 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 124px;
+    height: 56px;
+    top: -15px;
+    right: 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
   @media (min-width: global.$tablet-width) {
     width: 367px;
+    gap: 43px;
+    justify-content: baseline;
+
+    &::before {
+      width: 162px;
+      height: 77px;
+      top: -22px;
+      left: 22px;
+      border: 1px solid #cdcdcd;
+    }
+
+    &::after {
+      width: 162px;
+      height: 77px;
+      top: -22px;
+      right: 12px;
+      border: 1px solid #cdcdcd;
+    }
   }
 
   @media (min-width: global.$desktop-width) {
@@ -98,51 +150,70 @@
   display: flex;
   flex-direction: column;
   width: 124px;
-  gap: 7.5px;
+  gap: 7.53px;
   align-items: center;
 }
 
 .example__number {
   @include mixins.oswald(24px, 24px);
   color: #000000;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(30px, 37px);
+    width: 167px;
+    text-align: center;
+  }
 }
 
 .example__specification {
+  display: flex;
+  justify-content: center;
+  width: 75px;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
   margin: 0 auto;
+  background: #eaeaea;
+  padding: 0;
+  z-index: 2;
+  flex-wrap: wrap;
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.lato(14px, 14px);
+    padding: 0;
+    width: 134px;
+    height: 14px;
+  }
 }
 
 .example__conclusion {
   @include mixins.oswald(14px, 20px);
   display: flex;
+  width: 188px;
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 20px;
 
   @media (min-width: global.$tablet-width) {
     @include mixins.oswald(20px, 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 180px;
     text-align: right;
+    margin: 0;
     margin-left: auto;
   }
 
-  @media (min-width: global.$tablet-width) {
+  @media (min-width: global.$desktop-width) {
+    flex-direction: row;
+    align-items: baseline;
     text-align: left;
     width: 436px;
-    margin: 0;
+    margin-bottom: 75px;
   }
 }
 
-// .example__slider-wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   max-width: 320px;
-
-//   @media (min-width: global.$tablet-width) {
-//     max-width: 560px;
-//   }
-// }

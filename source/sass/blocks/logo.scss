@@ -1,20 +1,19 @@
 @use "./common/global";
 
 .logo__icon {
+  cursor: pointer;
+
   @media (min-width: global.$tablet-width) {
     display: none;
   }
 }
 
 .logo__text {
-  @media (min-width: global.$tablet-width) {
-    width: 101px;
-    height: 50px;
-    text-align: left;
-  }
+  cursor: pointer;
 
-  @media (min-width: global.$desktop-width) {
-    width: 118px;
-    height: 59px;
+  @media (min-width: global.$tablet-width) {
+    opacity: 0;
+    width: 174px;
+    height: 50px;
   }
 }

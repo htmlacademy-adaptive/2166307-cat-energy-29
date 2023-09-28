@@ -61,7 +61,7 @@
     align-items: center;
     width: 250px;
     padding: 0 37px 40px 37px;
-    background: linear-gradient(to top, #f2f2f2 402px, #ffffff 114px, #ffffff 60%, #ffffff 100%);
+    background: linear-gradient(to top, #f2f2f2 430px, #ffffff 114px, #ffffff 60%, #ffffff 100%);
   }
 
   @media (min-width: global.$desktop-width) {
@@ -80,11 +80,12 @@
     padding: 160px 37px 40px 37px;
     box-sizing: border-box;
     background: #ffffff;
-    border: 2px solid #f2f2f2;
+    // border: 2px solid #f2f2f2;
+    border: 2px solid #111111;
   }
 
   @media (min-width: global.$desktop-width) {
     width: 245px;
-    padding: 10px 37.5px 0 37.5px;
+    padding: 210px 37.5px 40px 37.5px;
   }
 }
