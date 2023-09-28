@@ -38,8 +38,14 @@
 }
 
 .example__data-wrapper {
-  @media (min-width: global.$desktop-width) {
+  @media (min-width: global.$tablet-width) {
     display: flex;
+    flex-direction: row;
+    width: 708px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: global.$desktop-width) {
     flex-direction: column;
     width: 436px;
     margin-left: 110px;
@@ -114,6 +120,24 @@
 
   @media (min-width: global.$tablet-width) {
     width: 367px;
+    gap: 43px;
+    justify-content: baseline;
+
+    &::before {
+      width: 162px;
+      height: 77px;
+      top: -22px;
+      left: 22px;
+      border: 1px solid #cdcdcd;
+    }
+
+    &::after {
+      width: 162px;
+      height: 77px;
+      top: -22px;
+      right: 12px;
+      border: 1px solid #cdcdcd;
+    }
   }
 
   @media (min-width: global.$desktop-width) {
@@ -136,25 +160,29 @@
 
   @media (min-width: global.$tablet-width) {
     @include mixins.oswald(30px, 37px);
+    width: 167px;
+    text-align: center;
   }
 }
 
 .example__specification {
   display: flex;
+  justify-content: center;
+  width: 75px;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
   margin: 0 auto;
   background: #eaeaea;
-  padding: 0 20px;
+  padding: 0;
   z-index: 2;
+  flex-wrap: wrap;
 
   @media (min-width: global.$tablet-width) {
     @include mixins.lato(14px, 14px);
     padding: 0;
-    width: 224px;
+    width: 134px;
     height: 14px;
-    flex-wrap: nowrap;
   }
 }
 
@@ -171,15 +199,21 @@
 
   @media (min-width: global.$tablet-width) {
     @include mixins.oswald(20px, 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 180px;
     text-align: right;
+    margin: 0;
     margin-left: auto;
   }
 
   @media (min-width: global.$desktop-width) {
+    flex-direction: row;
+    align-items: baseline;
     text-align: left;
     width: 436px;
-    margin: 0;
+    margin-bottom: 75px;
   }
 }
 

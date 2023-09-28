@@ -19,7 +19,13 @@
 
   @media (min-width: global.$desktop-width) {
     width: 1440px;
-    margin-bottom: 82px;
+    min-height: 694px;
+    margin-top: -125px;
+    margin-bottom: 0;
+    padding-bottom: 82px;
+    background-image: url("../../img/hero_cat_desktop.png");
+    background-repeat: no-repeat;
+    background-position: top right;
   }
 }
 
@@ -33,8 +39,8 @@
   }
 
   @media (min-width: global.$desktop-width) {
-    padding: 110px 834px 290px 190px;
-    background: linear-gradient(to left, #68b738d9 602px, #ffffff 114px, #ffffff 60%, #ffffff 100%);
+    padding: 109px 834px 285px 190px;
+    background: linear-gradient(to left, #68b738d9 670px, #ffffff 114px, #ffffff 60%, #ffffff 100%);
   }
 }
 
@@ -49,6 +55,10 @@
     @include mixins.oswald(60px, 60px);
     text-align: left;
     margin-bottom: 40px;
+  }
+
+  @media (min-width: global.$desktop-width) {
+    margin-top: 100px;
   }
 }
 
@@ -76,14 +86,15 @@
     width: 709px;
     height: 609px;
     object-fit: cover;
+    margin: 0;
   }
 
   @media (min-width: global.$desktop-width) {
     position: absolute;
     width: 552px;
     height: 499px;
-    top: 50px;
-    left: 650px;
+    top: 185px;
+    left: 633px;
   }
 }
 
@@ -101,7 +112,7 @@
   }
 
   @media (min-width: global.$desktop-width) {
-    top: 320px;
+    top: 620px;
     left: 190px;
   }
 }

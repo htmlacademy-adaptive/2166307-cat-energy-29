@@ -13,4 +13,8 @@
     flex-direction: none;
     margin-left: 94px;
   }
+
+  @media (min-width: global.$desktop-width) {
+    width: 478px;
+  }
 }

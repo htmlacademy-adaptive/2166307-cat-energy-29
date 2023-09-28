@@ -8,6 +8,11 @@
   @media (min-width: global.$tablet-width) {
     padding: 0;
   }
+
+  @media (min-width: global.$desktop-width) {
+    padding: 0;
+    padding-top: 55px;
+  }
 }
 
 .main-header__wrapper {
@@ -19,17 +24,16 @@
 
   @media (min-width: global.$tablet-width) {
     width: 704px;
-    padding-left: 4px;
+    padding-right: 4px;
   }
 
   @media (min-width: global.$desktop-width) {
     width: 1220px;
     padding: 0;
-    // background: linear-gradient(to left, #68b738d9 602px, #ffffff 114px, #ffffff 60%, #ffffff 100%);
   }
 }
 
-.main-header__logo {
+.main-header__logo-icon {
   display: flex;
 
   &:hover {
@@ -39,16 +43,44 @@
   &:active {
     opacity: 0.6;
   }
+
+  @media (min-width: global.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__logo-text {
+  display: flex;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: global.$tablet-width) {
+    background-image: url("../../img/logo_tablet.svg");
+  }
+
+  @media (min-width: global.$desktop-width) {
+    z-index: 2;
+  }
 }
 
 .main-header__toggle {
   display: block;
-  width: 18.2px;
-  height: 18px;
+  width: 22.2px;
+  height: 22px;
+  padding: 4px 4px;
   border: 0;
   background-image: url("../../img/toggle_disabled.svg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: 18px 18px;
+  background-color: #ffffff;
+  cursor: pointer;
 
   @media (min-width: global.$tablet-width) {
     display: none;

@@ -64,6 +64,7 @@
 
 .owner__field-label {
   @include mixins.oswald(16px, 18px);
+  position: relative;
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -77,4 +78,36 @@
 
 .owner__field-label:last-child {
   margin-bottom: 0;
+}
+
+.owner__field-label--mail::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 16px;
+  left: 250px;
+  background-image: url("../../img/email_icon.svg");
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, 20px);
+    left: 535px;
+  }
+}
+
+.owner__field-label--phone::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  left: 250px;
+  background-image: url("../../img/phone_icon.svg");
+
+  @media (min-width: global.$tablet-width) {
+    @include mixins.oswald(20px, 20px);
+    left: 535px;
+  }
 }
