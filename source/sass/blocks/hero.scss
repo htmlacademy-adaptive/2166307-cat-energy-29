@@ -12,6 +12,11 @@
   background-position: top center;
   color: #ffffff;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/hero_cat@2x.png");
+    background-size: 100% auto;
+  }
+
   @media (min-width: global.$tablet-width) {
     color: #000000;
     background-image: none;
@@ -26,6 +31,12 @@
     background-image: url("../../img/hero_cat_desktop.png");
     background-repeat: no-repeat;
     background-position: top right;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/hero_cat_desktop@2x.png");
+      background-size: auto 694px;
+      background-position: 100% 0;
+    }
   }
 }
 
